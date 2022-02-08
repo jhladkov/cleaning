@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'Svg',
   props: {
     viewBox: String,
     d: String,
