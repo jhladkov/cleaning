@@ -1,0 +1,47 @@
+.introduction{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../public/img/main.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &:before{
+    content: '';
+    opacity: .7;
+    background: rgb(43,37,37);
+    background: linear-gradient(90deg, rgba(43,37,37,1) 0%, rgba(103,103,103,1) 100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+  }
+
+  .introduction__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    z-index: 5;
+    .content__text{
+      color: $white;
+      font-weight: 700;
+      font-size: 80px;
+      span{
+        color: $green;
+      }
+    }
+    .content__icon{
+      fill: white;
+      color: white;
+      min-width: 40px;
+      position: relative;
+      animation: anchor 1s infinite linear;
+      animation-direction: alternate;
+    }
+  }
+}
