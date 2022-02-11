@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header/>
+    <Header v-once/>
     <div class="main-wrapper">
       <router-view/>
     </div>

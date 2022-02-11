@@ -1,4 +1,5 @@
 .header {
+  transition: all .3s;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,15 +24,48 @@
           margin-right: 20px;
           font-size: 20px;
           cursor: pointer;
-          transition: all .3s;
-          &:hover{
-            color: $white;
+
+
+          .menu__link {
+            transition: all .3s;
+
+            &:hover {
+              color: $white;
+            }
           }
-          &:last-child{
+
+
+          &:last-child {
             margin-right: 0;
           }
         }
       }
     }
   }
+}
+
+.slick,.stop-slick {
+  background: rgba(0, 0, 0, 1);
+
+  .header__inner {
+    .menu {
+      .menu__list {
+        .menu__item {
+          color: $white;
+
+          .menu__link {
+            &:hover {
+              color: $green;
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+}
+.stop-slick{
+  position: relative;
+  margin-bottom: 50px;
 }

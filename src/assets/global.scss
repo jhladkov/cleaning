@@ -81,12 +81,13 @@ img {
 
 a {
   text-decoration: none;
+  color: $white;
 }
 
 .title{
   font-size: 40px;
   color: $green;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .before-enter{
@@ -96,7 +97,6 @@ a {
 .enter{
   transform: translateX(0);
 }
-
 
 
 

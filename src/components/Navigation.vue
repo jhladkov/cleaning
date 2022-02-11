@@ -5,17 +5,28 @@
           v-for="item in navList"
           :key="item.id"
           class="menu__item"
+          @click="$emit('changeRoute')"
       >
-        {{ item.value }}
+        <router-link
+            :to="item.path"
+            class="menu__link"
+        >
+          {{ item.value }}
+        </router-link>
       </li>
+
     </ul>
   </nav>
 </template>
 
 <script>
+
 export default {
   props: {
     navList: Array
+  },
+  setup() {
+
   }
 }
 </script>

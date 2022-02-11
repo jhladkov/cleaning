@@ -1,5 +1,8 @@
 <template>
-  <Section class-name="introduction">
+  <Section class-name="introduction"  v-scrollanimation>
+    <div
+        class="introduction__background"
+    />
     <Container>
       <div
           class="introduction__content content"

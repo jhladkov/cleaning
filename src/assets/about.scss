@@ -1,17 +1,14 @@
 .about{
   .about__content{
     display: flex;
-    overflow: hidden;
+    align-items: center;
     .content__img{
-      min-width: 400px;
-      max-width: 500px;
+      width: 50%;
       margin-right: 20px;
     }
     .content__info{
-      overflow: auto;
       word-break: break-all;
-      max-height: 400px;
-
+      width: 50%;
     }
   }
 }
