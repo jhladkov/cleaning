@@ -4,6 +4,7 @@
     <About/>
     <OurOffer/>
     <Services/>
+    <OrderCall/>
   </Container>
 </template>
 
@@ -14,9 +15,10 @@ import About from "../components/About";
 import Container from "../hoc/Container";
 import OurOffer from "../components/OurOffer";
 import Services from "../components/Services";
+import OrderCall from "../components/OrderCall";
 
 export default {
-  components: {Services, OurOffer, Container, About, Introduction},
+  components: {OrderCall, Services, OurOffer, Container, About, Introduction},
 
 }
 </script>

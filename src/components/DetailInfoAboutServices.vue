@@ -4,6 +4,7 @@
       <Title :title="state.arrService.title" class-name="service__title"/>
       <p>{{ state.arrService.description }}</p>
     </Section>
+    <OrderCall/>
   </Container>
 </template>
 
@@ -13,9 +14,10 @@ import {useStore} from 'vuex'
 import {onMounted, reactive, ref, watchEffect} from "vue";
 import Title from "../UI/Title";
 import Section from "../hoc/Section";
+import OrderCall from "./OrderCall";
 
 export default {
-  components: {Section, Title},
+  components: {OrderCall, Section, Title},
   setup() {
     const router = useRoute()
     const store = useStore()

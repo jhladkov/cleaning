@@ -5,32 +5,32 @@ export default createStore({
         servicesInfo: [
             {
                 title: 'Мойка окон',
-                description: "Мойка окон очень важна",
+                description: "Здесь будет текст",
                 index: 0
             },
             {
                 title: 'Мойка квартир и офисов',
-                description: "Мойка окон очень важна",
+                description: "Здесь будет текст",
                 index: 1
             },
             {
                 title: 'Уборка после ремонта',
-                description: "Мойка окон очень важна",
+                description: "Здесь будет текст",
                 index: 2
             },
             {
                 title: 'Химчистка',
-                description: "Мойка окон очень важна",
+                description: "Здесь будет текст",
                 index: 3
             },
             {
                 title: 'Озонация',
-                description: "Мойка окон очень важна",
+                description: "Здесь будет текст",
                 index: 4
             },
             {
                 title: 'Дезифекция, дератизация',
-                description: "Мойка окон очень важна",
+                description: "Здесь будет текст",
                 index: 5
             },
         ]

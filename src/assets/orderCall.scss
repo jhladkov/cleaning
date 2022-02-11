@@ -1,0 +1,26 @@
+.order-call{
+  .order-call__content{
+    .content__form{
+      display: flex;
+      flex-direction: column;
+      max-width: 513px;
+      .form__inner{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      .input{
+        margin-right: 10px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      .form__more-info{
+        max-height: 400px;
+        min-height: 200px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

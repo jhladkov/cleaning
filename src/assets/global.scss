@@ -90,6 +90,30 @@ a {
   margin-bottom: 40px;
 }
 
+.input{
+  background: none;
+  padding: 15px;
+  outline: none;
+  border: 1px solid $darkgray;
+  transition: all .3s;
+  border-radius: 13px;
+  justify-content: flex-start;
+  font-size: 18px;
+  &:focus{
+    border-color: $green;
+  }
+}
+.textarea{
+  outline: none;
+  border: 1px solid $darkgray;
+  border-radius: 13px;
+  transition: all .3s;
+  font-size: 18px;
+  &:focus{
+    border-color: $green;
+  }
+}
+
 .before-enter{
   transform: translateX(-500px);
 }
