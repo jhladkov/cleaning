@@ -10,7 +10,7 @@
           :key="block.id"
           :block-info="block"
           v-scrollanimation
-          text="Больше информации"
+          text="Подробнее"
       />
     </div>
   </Section>

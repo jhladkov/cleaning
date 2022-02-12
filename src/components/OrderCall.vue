@@ -6,7 +6,7 @@
     />
     <div class="order-call__content content">
       <Form
-          @submit.prevent="sendData"
+          @submit.prevent="sendMessageToGmail"
           class-name="content__form form"
       >
         <div class="form__inner">
@@ -39,6 +39,7 @@
 
 import {reactive} from "vue";
 import TextArea from "../UI/TextArea";
+import mailer from "../utilities";
 
 export default {
   components: {TextArea},
@@ -48,13 +49,19 @@ export default {
       phoneNumber: '',
       areaInfo: ''
     })
-
-    const sendData = () => {
+    const sendMessageToGmail = () => {
+      let mainOption = {
+        from: 'cleaninghouseassistant@gmail.com',
+        to: 'cleaninghouseassistant@gmail.com',
+        subject: 'Клиент прислал письмо!',
+        text: 'eeeeee it is work!!!'
+      }
       console.log('click')
+      mailer(mainOption)
     }
 
     return {
-      sendData, state
+      sendMessageToGmail, state
     }
   }
 }
