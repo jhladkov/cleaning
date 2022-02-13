@@ -23,7 +23,7 @@
         </div>
         <TextArea
             class-name="form__more-info"
-            v-model.trim="state.areaInfo"
+            v-model.trim="state.message"
             placeholder="Добавьте больше информании (если нужно)"
         />
         <Button
@@ -39,7 +39,7 @@
 
 import {reactive} from "vue";
 import TextArea from "../UI/TextArea";
-import mailer from "../utilities";
+import emailjs from '@emailjs/browser'
 
 export default {
   components: {TextArea},
@@ -47,18 +47,25 @@ export default {
     const state = reactive({
       name: '',
       phoneNumber: '',
-      areaInfo: ''
+      message: ''
     })
     const sendMessageToGmail = () => {
-      let mainOption = {
-        from: 'cleaninghouseassistant@gmail.com',
-        to: 'cleaninghouseassistant@gmail.com',
-        subject: 'Клиент прислал письмо!',
-        text: 'eeeeee it is work!!!'
-      }
-      console.log('click')
-      mailer(mainOption)
+      const templateParams = {
+        name: state.name,
+        phoneNumber: state.phoneNumber,
+        message: state.message
+      };
+      emailjs.send('service_dufeb4j', 'template_6ftjru6', templateParams, 'user_PkECrKKCc6WRc2xXl6evf')
+          .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+          }, (err) => {
+            console.log('FAILED...', err);
+          });
+      state.name = ''
+      state.phoneNumber = ''
+      state.message = ''
     }
+
 
     return {
       sendMessageToGmail, state

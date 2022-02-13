@@ -5,6 +5,7 @@ import store from './store'
 import components from '/src/UI/index'
 import directives from '@/directives/index'
 
+
 const app = createApp(App)
 
 
@@ -13,7 +14,6 @@ components.forEach(component => {
 })
 
 directives.forEach(directive => {
-    console.log(directive)
     app.directive(directive.name, directive)  // register directives
 })
 
