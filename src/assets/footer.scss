@@ -1,0 +1,38 @@
+.footer {
+  padding: 20px 0;
+  background: $black;
+
+  .footer__wrapper {
+    display: flex;
+    align-items: center;
+
+    .footer__logo-block {
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid $white;
+    }
+
+    .footer__social-media {
+      display: flex;
+
+      .media__item {
+        margin-right: 20px;
+        cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
+        svg{
+          max-width: 40px;
+        }
+
+        .facebook,.telegram {
+          fill: $blue;
+        }
+        .instagram{
+          fill: $pink;
+        }
+      }
+    }
+  }
+}

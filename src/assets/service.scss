@@ -12,9 +12,7 @@
       text-align: center;
       border-radius: 13px;
       padding: 20px;
-      transition-property: transform, color,border-color ;
-      transition-duration: 2s, .3s, .3s;
-      //transition: all .3s;
+      transition: all .3s;
 
       &:hover{
         transform: translateY(-10px);

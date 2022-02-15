@@ -1,5 +1,8 @@
 <template>
-  <Section class-name="services">
+  <Section
+      class-name="services"
+      v-scrollanimation
+  >
     <Title
         class-name="services__title"
         title="Наши услуги"
@@ -9,7 +12,6 @@
           v-for="block in state.blocks"
           :key="block.id"
           :block-info="block"
-          v-scrollanimation
           text="Подробнее"
       />
     </div>
@@ -17,13 +19,12 @@
 </template>
 
 <script>
-import Section from "../hoc/Section";
-import Title from "../UI/Title";
+
 import ServiceBlock from "./ServiceBlock";
 import {reactive} from "vue";
 
 export default {
-  components: {ServiceBlock, Title, Section},
+  components: {ServiceBlock},
   setup() {
     const state = reactive({
       blocks: [
@@ -38,7 +39,7 @@ export default {
           id: Math.floor(Math.random() * 10000),
           index: 1,
           title: 'Мойка квартир и офисов',
-          prise: 500  ,
+          prise: 500,
           src: './img/service/block1.png'
         },
         {

@@ -16,12 +16,15 @@
       </li>
 
     </ul>
+    <Call/>
   </nav>
 </template>
 
 <script>
 
+import Call from "./Call";
 export default {
+  components: {Call},
   props: {
     navList: Array
   },

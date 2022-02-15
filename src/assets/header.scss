@@ -11,14 +11,25 @@
     align-items: center;
     justify-content: space-between;
 
-    .header__logo {
-      max-width: 100px;
-    }
-
     .menu {
+      display: flex;
+      align-items: center;
+
+      .call {
+        display: flex;
+        align-items: center;
+        .call__svg {
+          margin-right: 10px;
+          max-width: 30px;
+          fill: $white;
+        }
+
+      }
+
       .menu__list {
         display: flex;
         flex-wrap: wrap;
+        margin-right: 20px;
 
         .menu__item {
           margin-right: 20px;
@@ -44,8 +55,16 @@
   }
 }
 
-.slick,.stop-slick {
-  background: rgba(0, 0, 0, 1);
+.slick, .stop-slick {
+  background: $black;
+
+  .call {
+    &:hover {
+      border-color: $green;
+      background: $green;
+    }
+
+  }
 
   .header__inner {
     .menu {
@@ -65,7 +84,8 @@
     }
   }
 }
-.stop-slick{
+
+.stop-slick {
   position: relative;
   margin-bottom: 50px;
 }

@@ -7,9 +7,7 @@
   >
     <Container>
       <div class="header__inner">
-        <div class="header__logo">
-            <Img src="./img/logo.png"/>
-        </div>
+        <Logo class-name="header__logo"/>
         <Navigation
             :nav-list="state.listArr"
             @changeRoute="scrollUp"
@@ -25,9 +23,10 @@ import Img from "../UI/Img";
 import Navigation from "./Navigation";
 import {reactive,onMounted,watchEffect} from "vue";
 import {useRoute} from 'vue-router'
+import Logo from "./Logo";
 
 export default {
-  components: {Navigation, Img, Container},
+  components: {Logo, Navigation, Img, Container},
 
   setup() {
     const router = useRoute()
