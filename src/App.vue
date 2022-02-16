@@ -1,6 +1,7 @@
 <template>
   <main>
     <Header v-once/>
+    <BurgerMenu/>
     <div class="main-wrapper">
       <router-view/>
     </div>
@@ -11,9 +12,10 @@
 <script>
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BurgerMenu from "./components/BurgerMenu";
 
 export default {
-  components: {Footer, Header}
+  components: {BurgerMenu, Footer, Header}
 }
 </script>
 

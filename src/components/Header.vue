@@ -12,6 +12,13 @@
             :nav-list="state.listArr"
             @changeRoute="scrollUp"
         />
+        <div class="header__open hidden">
+          <Svg
+              view-box="0 0 20 20"
+              d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"
+              @click="openMenu"
+          />
+        </div>
       </div>
     </Container>
   </header>
@@ -24,12 +31,14 @@ import Navigation from "./Navigation";
 import {reactive,onMounted,watchEffect} from "vue";
 import {useRoute} from 'vue-router'
 import Logo from "./Logo";
+import {useStore} from "vuex";
 
 export default {
   components: {Logo, Navigation, Img, Container},
 
   setup() {
     const router = useRoute()
+    const store = useStore()
 
     const state = reactive({
       listArr: [
@@ -68,9 +77,9 @@ export default {
       });
     }
 
-    onMounted(() => {
-
-    })
+   const openMenu = () => {
+      store.dispatch('changeHideMenu')
+   }
 
     watchEffect(() => {
       if (router.name === 'Home') {
@@ -86,7 +95,7 @@ export default {
     })
 
     return {
-      state,scrollUp
+      state,scrollUp,openMenu
     }
   }
 }

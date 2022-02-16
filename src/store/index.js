@@ -33,12 +33,17 @@ export default createStore({
                 description: "Здесь будет текст",
                 index: 5
             },
-        ]
+        ],
+        openHideMenu: false
     },
     mutations: {
-
+        setOpenHideMenu(state){
+            state.openHideMenu = !state.openHideMenu
+        }
     },
     actions: {
-
+        changeHideMenu({commit}) {
+            commit('setOpenHideMenu')
+        }
     },
 })

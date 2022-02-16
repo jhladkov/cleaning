@@ -28,9 +28,6 @@ export default {
   props: {
     navList: Array
   },
-  setup() {
-
-  }
 }
 </script>
 

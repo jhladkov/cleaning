@@ -137,7 +137,16 @@ a {
   border-radius: 50px;
   transition: all .3s;
 }
+.close{
+  transform: translateX(-100%);
+}
+.open{
+  transform: translateX(0%);
+}
 
+.hidden{
+  display: none;
+}
 
 
 

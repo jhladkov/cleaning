@@ -9,7 +9,7 @@
           v-scrollanimation
       >
         <p class="content__text">
-          Лучшая клининговая служба в <span>мире</span>
+          Домашний помощник - помощь в каждый <span>дом</span>
         </p>
         <Svg
             class-name="content__icon"

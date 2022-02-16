@@ -2,8 +2,7 @@
   .services__content {
     display: grid;
     gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
     .content__block {
       display: flex;
       flex-direction: column;
