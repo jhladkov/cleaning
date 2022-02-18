@@ -1,5 +1,8 @@
 <template>
-  <div class="logo" :class="className">
+  <div
+      class="logo"
+      :class="className"
+  >
     <Img src="./img/logo.png"/>
   </div>
 </template>

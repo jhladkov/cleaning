@@ -1,4 +1,5 @@
 .hide-menu {
+  transform: translateX(-100%);
   position: fixed;
   transition: all .3s;
   padding: 30px 15px;

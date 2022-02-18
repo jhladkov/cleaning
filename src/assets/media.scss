@@ -1,30 +1,37 @@
 @media (max-width: 1200px) {
   .introduction {
     .introduction__content {
-      .content__text{
+      .content__text {
         font-size: calc(27px + (50 - 27) * ((100vw - 320px) / (1200 - 320)));
       }
     }
   }
-  .title{
+  .title {
     font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1200 - 320)));
   }
-  p,h4{
+  p, h4 {
     font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1200 - 320)));
   }
-
+  .before-enter {
+    transform: translateX(calc(-180px + (-500 - -180) * ((100vw - 320px) / (1200 - 320))));
+  }
+  .enter {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 1000px) {
-  .offer{
-    .offer__content{
+  .offer {
+    .offer__content {
       flex-direction: column-reverse;
       align-items: flex-start;
-      .content__info-text{
+
+      .content__info-text {
         max-width: initial;
         margin-right: 0;
       }
-      .content__blocks{
+
+      .content__blocks {
         margin-bottom: 20px;
       }
     }
@@ -32,32 +39,64 @@
 }
 
 @media (max-width: 750px) {
-  .header{
-    .header__inner{
-      .header__open{
+  .header {
+    .header__inner {
+      .header__open {
         cursor: pointer;
         fill: $white;
         display: block;
-        svg{
+
+        svg {
           max-width: 30px;
         }
       }
-      .menu{
+
+      .menu {
         display: none;
       }
     }
   }
-  .about{
-    .about__content{
+  .about {
+    .about__content {
       align-items: center;
       flex-direction: column;
-      .content__img{
+
+      .content__img {
         width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
       }
-      .info{
+
+      .info {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .order-call {
+    .order-call__content {
+      .content__form {
+        .input{
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        .form__inner {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .offer {
+    .offer__content {
+      align-items: center;
+
+      .content__blocks {
+        grid-template-columns: 1fr;
       }
     }
   }

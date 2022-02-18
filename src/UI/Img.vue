@@ -1,5 +1,9 @@
 <template>
-  <img :src="src" alt="" :class="className">
+  <img
+      :src="src"
+      alt=""
+      :class="className"
+  >
 </template>
 
 <script>

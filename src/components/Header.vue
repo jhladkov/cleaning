@@ -1,9 +1,7 @@
 <template>
   <header
       class="header"
-      :class="
-       state.stopSlick ? 'stop-slick' :  state.slickHeader ? 'slick' : ''"
-
+      :class="{'stop-slick': state.stopSlick, slick: state.slickHeader}"
   >
     <Container>
       <div class="header__inner">
@@ -15,7 +13,7 @@
         <div class="header__open hidden">
           <Svg
               view-box="0 0 20 20"
-              d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"
+              :d="dSvg"
               @click="openMenu"
           />
         </div>
@@ -28,10 +26,11 @@
 import Container from "../hoc/Container";
 import Img from "../UI/Img";
 import Navigation from "./Navigation";
-import {reactive,onMounted,watchEffect} from "vue";
+import {computed, reactive, watchEffect} from "vue";
 import {useRoute} from 'vue-router'
 import Logo from "./Logo";
 import {useStore} from "vuex";
+import {scrollUp} from "../utilities/scrollUp";
 
 export default {
   components: {Logo, Navigation, Img, Container},
@@ -62,19 +61,14 @@ export default {
       stopSlick: false
     })
 
+    const dSvg = computed(() => 'M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z')
+
     const windowScroll = () => {
       if (window.scrollY > 0) {
         state.slickHeader = true
       }else {
         state.slickHeader = false
       }
-    }
-
-    const scrollUp = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
     }
 
    const openMenu = () => {
@@ -95,7 +89,7 @@ export default {
     })
 
     return {
-      state,scrollUp,openMenu
+      state,scrollUp,openMenu,dSvg
     }
   }
 }

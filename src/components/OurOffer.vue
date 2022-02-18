@@ -1,10 +1,14 @@
 <template>
-  <Section class-name="offer" v-scrollanimation>
-    <Title class-name="" title="Наши преимущества"/>
+  <Section
+      class-name="offer"
+      v-scrollanimation
+  >
+    <Title
+        title="Наши преимущества"
+    />
     <div class="offer__content content">
       <div class="content__info-text">
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aperiam dicta eligendi error harum labore nam nisi, optio voluptas. Alias eveniet explicabo facere fugiat ipsum laboriosam maxime, veniam veritatis.</span><span>Ab accusamus ad aperiam aspernatur assumenda consectetur deserunt laboriosam modi sed temporibus! Alias aliquam architecto aspernatur, at aut commodi dicta dolores eum explicabo nam numquam sed, suscipit veniam, voluptas voluptatum.</span>
-        </p>
+        <p>{{description}}</p>
       </div>
       <div class="content__blocks block">
         <div
@@ -30,7 +34,7 @@
 import Section from "../hoc/Section";
 import Title from "../UI/Title";
 import Svg from "../UI/Svg";
-import {reactive} from "vue";
+import {computed, reactive} from "vue";
 
 export default {
   components: {Svg, Title, Section},
@@ -75,8 +79,9 @@ export default {
         },
       ],
     })
+    const description = computed(() => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi aperiam dicta eligendi error harum labore nam nisi, optio voluptas. Alias eveniet explicabo facere fugiat ipsum laboriosam maxime, veniam veritatis.')
     return{
-      state
+      state,description
     }
   }
 }

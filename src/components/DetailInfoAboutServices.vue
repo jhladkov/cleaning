@@ -1,7 +1,13 @@
 <template>
   <Container>
-    <Section class-name="service">
-      <Title :title="state.arrService.title" class-name="service__title"/>
+    <Section
+        class-name="service"
+        v-scrollanimation
+    >
+      <Title
+          :title="state.arrService.title"
+          class-name="service__title"
+      />
       <p>{{ state.arrService.description }}</p>
     </Section>
     <OrderCall/>

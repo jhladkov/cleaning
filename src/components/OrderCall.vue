@@ -1,5 +1,8 @@
 <template>
-  <Section class-name="order-call">
+  <Section
+      class-name="order-call"
+      v-scrollanimation
+  >
     <Title
         class-name="order-call__title"
         title="Заказать уборку"

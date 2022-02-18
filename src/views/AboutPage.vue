@@ -14,9 +14,6 @@ import {onMounted} from "vue";
 export default {
   components: {OurOffer, About},
   setup() {
-    onMounted(() => {
-
-    })
   }
 }
 </script>
